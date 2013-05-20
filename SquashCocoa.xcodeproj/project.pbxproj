@@ -42,6 +42,13 @@
 			remoteGlobalIDString = 22C1EA9416AB4C3B00FC6E94;
 			remoteInfo = "SquashCocoa OSX";
 		};
+		A7F066B31746BA9E00D58C39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7F066AA1746BA9E00D58C39 /* SquashTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A73C773017441C36005D7E76;
+			remoteInfo = SquashTest;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -50,12 +57,14 @@
 		22C1EA8216AB4C1000FC6E94 /* SquashCocoa iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SquashCocoa iOS.xcodeproj"; path = "SquashCocoa iOS/SquashCocoa iOS.xcodeproj"; sourceTree = "<group>"; };
 		22C1EAAC16AB4C3B00FC6E94 /* SquashCocoa OSX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SquashCocoa OSX.xcodeproj"; path = "SquashCocoa OSX/SquashCocoa OSX.xcodeproj"; sourceTree = "<group>"; };
 		22C1EAB316AB4D5300FC6E94 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A7F066AA1746BA9E00D58C39 /* SquashTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SquashTest.xcodeproj; path = SquashTest/SquashTest.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		22C1EA5D16AB4BED00FC6E94 = {
 			isa = PBXGroup;
 			children = (
+				A7F066AA1746BA9E00D58C39 /* SquashTest.xcodeproj */,
 				22C1EAB216AB4D4600FC6E94 /* Documentation */,
 				22C1EAAC16AB4C3B00FC6E94 /* SquashCocoa OSX.xcodeproj */,
 				22C1EA8216AB4C1000FC6E94 /* SquashCocoa iOS.xcodeproj */,
@@ -91,6 +100,14 @@
 			name = Documentation;
 			sourceTree = "<group>";
 		};
+		A7F066AB1746BA9E00D58C39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7F066B41746BA9E00D58C39 /* SquashTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
@@ -116,6 +133,10 @@
 				{
 					ProductGroup = 22C1EAAD16AB4C3B00FC6E94 /* Products */;
 					ProjectRef = 22C1EAAC16AB4C3B00FC6E94 /* SquashCocoa OSX.xcodeproj */;
+				},
+				{
+					ProductGroup = A7F066AB1746BA9E00D58C39 /* Products */;
+					ProjectRef = A7F066AA1746BA9E00D58C39 /* SquashTest.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -158,6 +179,13 @@
 			fileType = wrapper.framework;
 			path = "SquashCocoa OSX.framework";
 			remoteRef = 22C1EAB016AB4C3B00FC6E94 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A7F066B41746BA9E00D58C39 /* SquashTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SquashTest.app;
+			remoteRef = A7F066B31746BA9E00D58C39 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

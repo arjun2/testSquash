@@ -1,48 +1,44 @@
 //
-//  STAppDelegate.m
-//  SquashCocoa iOS Tester
+//  RELAppDelegate.m
+//  SquashTest
 //
-//  Created by Tim Morgan on 1/23/13.
-//  Copyright (c) 2013 Square. All rights reserved.
+//  Created by Sohaney,Arjun on 5/15/13.
+//  Copyright (c) 2013 Sohaney,Arjun. All rights reserved.
 //
 
-#import "STAppDelegate.h"
-
-#import "STViewController.h"
+#import "RELAppDelegate.h"
+#import "RELViewController.h"
 #import "SquashCocoa.h"
 
-@implementation STAppDelegate
-
-- (void)dealloc
-{
-    [_window release];
-    [_viewController release];
-    [super dealloc];
-}
+@implementation RELAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [SquashCocoa sharedClient].APIKey = SQUASH_API_KEY;
     [SquashCocoa sharedClient].environment = @"development";
     [SquashCocoa sharedClient].host = @"http://localhost:3000";
-
+    
     NSString *revisionPath = [[NSBundle mainBundle] pathForResource:@"Revision" ofType:nil];
     NSString *revision = [NSString stringWithContentsOfFile:revisionPath encoding:NSASCIIStringEncoding error:nil];
+    
+    NSLog(@"revisionPath: %@", revisionPath);
+    NSLog(@"revision: %@", revision);
+    
     revision = [revision stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     [SquashCocoa sharedClient].revision = revision;
-
-    [[SquashCocoa sharedClient] hook];
+    
     [[SquashCocoa sharedClient] reportErrors];
+    [[SquashCocoa sharedClient] hook];
 
-
-    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[[STViewController alloc] initWithNibName:@"STViewController_iPhone" bundle:nil] autorelease];
-    } else {
-        self.viewController = [[[STViewController alloc] initWithNibName:@"STViewController_iPad" bundle:nil] autorelease];
-    }
+    
+    //view controller
+    self.viewController = [[RELViewController alloc] initWithNibName:@"RELViewController" bundle:nil];
+
     self.window.rootViewController = self.viewController;
+
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }

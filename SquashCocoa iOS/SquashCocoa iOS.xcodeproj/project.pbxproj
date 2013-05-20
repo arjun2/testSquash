@@ -41,6 +41,8 @@
 		22C1F7DF16AB500100FC6E94 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1EAD216AB4EB300FC6E94 /* Reachability.m */; };
 		22C1F82416AB50A100FC6E94 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1F82316AB50A100FC6E94 /* CoreLocation.framework */; };
 		22C1F82616AB50A600FC6E94 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1F82516AB50A600FC6E94 /* SystemConfiguration.framework */; };
+		A7F066BB1746BC7F00D58C39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1EA7416AB4C1000FC6E94 /* Foundation.framework */; };
+		A7F06D7F1746CECC00D58C39 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22C1EA7416AB4C1000FC6E94 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,10 +294,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A7F066B81746BC7F00D58C39 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F06D801746CECC00D58C39 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		221AAD2B16B0CEAA00628F6E /* SquashCocoa iOS Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SquashCocoa iOS Tester.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		221AAD2B16B0CEAA00628F6E /* SquashCocoaiOSTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquashCocoaiOSTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		221AAD3216B0CEAB00628F6E /* SquashCocoa iOS Tester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquashCocoa iOS Tester-Info.plist"; sourceTree = "<group>"; };
 		221AAD3416B0CEAB00628F6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		221AAD3616B0CEAB00628F6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1140,6 +1160,8 @@
 		22C1F82516AB50A600FC6E94 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		22CA671316B096CA00A9D6E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		22CA671616B096CA00A9D6E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7F066BA1746BC7F00D58C39 /* libLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F06D841746CECC00D58C39 /* libLib copy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libLib copy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1175,6 +1197,22 @@
 				22C1F82616AB50A600FC6E94 /* SystemConfiguration.framework in Frameworks */,
 				22C1F82416AB50A100FC6E94 /* CoreLocation.framework in Frameworks */,
 				22C1EA7516AB4C1000FC6E94 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F066B71746BC7F00D58C39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F066BB1746BC7F00D58C39 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F06D7E1746CECC00D58C39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F06D7F1746CECC00D58C39 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2620,7 +2658,9 @@
 			children = (
 				22C1EA7116AB4C1000FC6E94 /* libSquashCocoa iOS.a */,
 				22BF06F316AB5A6100F5B384 /* libSquashCocoa iOS Simulator.a */,
-				221AAD2B16B0CEAA00628F6E /* SquashCocoa iOS Tester.app */,
+				221AAD2B16B0CEAA00628F6E /* SquashCocoaiOSTester.app */,
+				A7F066BA1746BC7F00D58C39 /* libLib.a */,
+				A7F06D841746CECC00D58C39 /* libLib copy.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2682,16 +2722,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		221AAD2A16B0CEAA00628F6E /* SquashCocoa iOS Tester */ = {
+		221AAD2A16B0CEAA00628F6E /* SquashCocoaiOSTester */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 221AAD4B16B0CEAB00628F6E /* Build configuration list for PBXNativeTarget "SquashCocoa iOS Tester" */;
+			buildConfigurationList = 221AAD4B16B0CEAB00628F6E /* Build configuration list for PBXNativeTarget "SquashCocoaiOSTester" */;
 			buildPhases = (
 				221AAD2716B0CEAA00628F6E /* Sources */,
 				221AAD5116B0CEE400628F6E /* CopyFiles */,
 				221AAD2816B0CEAA00628F6E /* Frameworks */,
 				221AAD2916B0CEAA00628F6E /* Resources */,
 				221AAD4E16B0CEBB00628F6E /* Copy Git Revision */,
-				22697D5416B1EFE4006159AF /* Notify Squash of Release */,
 				22697D5516B208C7006159AF /* Upload Symbolication Data to Squash */,
 			);
 			buildRules = (
@@ -2699,9 +2738,9 @@
 			dependencies = (
 				221AAD5016B0CED600628F6E /* PBXTargetDependency */,
 			);
-			name = "SquashCocoa iOS Tester";
+			name = SquashCocoaiOSTester;
 			productName = "SquashCocoa iOS Tester";
-			productReference = 221AAD2B16B0CEAA00628F6E /* SquashCocoa iOS Tester.app */;
+			productReference = 221AAD2B16B0CEAA00628F6E /* SquashCocoaiOSTester.app */;
 			productType = "com.apple.product-type.application";
 		};
 		22BF06F216AB5A6100F5B384 /* SquashCocoa iOS Simulator */ = {
@@ -2736,6 +2775,40 @@
 			name = "SquashCocoa iOS";
 			productName = "SquashCocoa iOS";
 			productReference = 22C1EA7116AB4C1000FC6E94 /* libSquashCocoa iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A7F066B91746BC7F00D58C39 /* Lib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7F066EC1746BC7F00D58C39 /* Build configuration list for PBXNativeTarget "Lib" */;
+			buildPhases = (
+				A7F066B61746BC7F00D58C39 /* Sources */,
+				A7F066B71746BC7F00D58C39 /* Frameworks */,
+				A7F066B81746BC7F00D58C39 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lib;
+			productName = Lib;
+			productReference = A7F066BA1746BC7F00D58C39 /* libLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A7F06D7C1746CECC00D58C39 /* Lib copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7F06D811746CECC00D58C39 /* Build configuration list for PBXNativeTarget "Lib copy" */;
+			buildPhases = (
+				A7F06D7D1746CECC00D58C39 /* Sources */,
+				A7F06D7E1746CECC00D58C39 /* Frameworks */,
+				A7F06D801746CECC00D58C39 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lib copy";
+			productName = Lib;
+			productReference = A7F06D841746CECC00D58C39 /* libLib copy.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -2826,7 +2899,9 @@
 			targets = (
 				22C1EA7016AB4C1000FC6E94 /* SquashCocoa iOS */,
 				22BF06F216AB5A6100F5B384 /* SquashCocoa iOS Simulator */,
-				221AAD2A16B0CEAA00628F6E /* SquashCocoa iOS Tester */,
+				221AAD2A16B0CEAA00628F6E /* SquashCocoaiOSTester */,
+				A7F066B91746BC7F00D58C39 /* Lib */,
+				A7F06D7C1746CECC00D58C39 /* Lib copy */,
 			);
 		};
 /* End PBXProject section */
@@ -3075,20 +3150,6 @@
 			shellPath = /bin/sh;
 			shellScript = "git --git-dir=\"$PROJECT_DIR/../.git\" rev-parse HEAD > \"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Revision\"";
 		};
-		22697D5416B1EFE4006159AF /* Notify Squash of Release */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Notify Squash of Release";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "~/.rvm/bin/rvm 1.9.3@squash_ios exec env squash_release --project-dir=\"$PROJECT_DIR/..\" \"http://localhost:3000\" ${SQUASH_API_KEY} $([[ ${SKIP_INSTALL} = NO ]] && echo \"release\" || echo \"development\")";
-		};
 		22697D5516B208C7006159AF /* Upload Symbolication Data to Squash */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -3101,7 +3162,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "~/.rvm/bin/rvm 1.9.3@squash_ios exec env symbolicate \"http://localhost:3000\"";
+			shellScript = "~/.rvm/bin/rvm ruby-1.9.3-p392@squash exec env symbolicate \"http://localhost:3000\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -3137,6 +3198,20 @@
 				22C1F7DE16AB500100FC6E94 /* SquashCocoa.m in Sources */,
 				22C1F7DF16AB500100FC6E94 /* Reachability.m in Sources */,
 				22BF057E16AB57E200F5B384 /* ISO8601DateFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F066B61746BC7F00D58C39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F06D7D1746CECC00D58C39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3301,7 +3376,7 @@
 				INFOPLIST_FILE = "SquashCocoa iOS Tester/SquashCocoa iOS Tester-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SQUASH_API_KEY = "8bafffc3-f524-4a01-ac31-1fca29adebad";
+				SQUASH_API_KEY = "966f3690-32df-429c-ba8e-226ef7bbec60";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3317,7 +3392,7 @@
 				INFOPLIST_FILE = "SquashCocoa iOS Tester/SquashCocoa iOS Tester-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SQUASH_API_KEY = "8bafffc3-f524-4a01-ac31-1fca29adebad";
+				SQUASH_API_KEY = "966f3690-32df-429c-ba8e-226ef7bbec60";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -3420,10 +3495,78 @@
 			};
 			name = Release;
 		};
+		A7F066C31746BC7F00D58C39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				DSTROOT = /tmp/Lib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lib/Lib-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A7F066C41746BC7F00D58C39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				DSTROOT = /tmp/Lib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lib/Lib-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A7F06D821746CECC00D58C39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				DSTROOT = /tmp/Lib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lib/Lib-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "Lib copy";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A7F06D831746CECC00D58C39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				DSTROOT = /tmp/Lib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lib/Lib-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "Lib copy";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		221AAD4B16B0CEAB00628F6E /* Build configuration list for PBXNativeTarget "SquashCocoa iOS Tester" */ = {
+		221AAD4B16B0CEAB00628F6E /* Build configuration list for PBXNativeTarget "SquashCocoaiOSTester" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				221AAD4C16B0CEAB00628F6E /* Debug */,
@@ -3458,6 +3601,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		A7F066EC1746BC7F00D58C39 /* Build configuration list for PBXNativeTarget "Lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F066C31746BC7F00D58C39 /* Debug */,
+				A7F066C41746BC7F00D58C39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7F06D811746CECC00D58C39 /* Build configuration list for PBXNativeTarget "Lib copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F06D821746CECC00D58C39 /* Debug */,
+				A7F06D831746CECC00D58C39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
